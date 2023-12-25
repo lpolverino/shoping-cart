@@ -1,0 +1,9 @@
+i wanna create a doble page website for e-shopping with react
+so first, i have to get a folder for every components that i will need. In every folder created this way i will add 3 files, a jsx file, a module.css file and test.js file.
+i will use react testing with "jest" tools
+so first of all i will fetch false products data from https://fakestoreapi.com/
+i could group prodeucts by categorys. the fetching could be done once in a parent component avoiding waterfall requests.
+i will need react routes for at leats 2 pages, a home page and a products page.
+for the components there will be a costant bar to togle betwen pages and have a searching bar for sorting elements when render in the products page, also a cart button without onclick handler. Lastly there will be a card component for every product, that will need to be provided with the correct fetched props for rendering the product and have buttons for adding that product for the cart componentthat will rendered all products added with their totals.
+the home page should render some content, i decided add a scrolling background image with some preview content and a button to got to the shoping cart a some anoucements section in the end
+the home page should render some content, i decided add a scrolling background image with some preview content and a button to got to the shoping cart a some anoucements section in the end..
