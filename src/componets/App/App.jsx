@@ -1,12 +1,14 @@
-import { useState } from 'react'
 import './App.css'
+import Header from '../Header/Header'
+import ImageSlider from '../ImageSlider/ImageSlider'
+import Footer from '../Footer/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <h1>Welocome to our shoping page</h1>
+    <Header></Header>
+    <ImageSlider></ImageSlider>
+    <Footer></Footer>
     </>
   )
 }
