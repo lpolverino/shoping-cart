@@ -10,7 +10,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorPage msg="Oh no, this route doesn't exist!"/>,
   },
   {
     path: "shop",

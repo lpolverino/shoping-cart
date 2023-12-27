@@ -1,21 +1,23 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Header component > renders with two buttons and the cart icon 1`] = `
+exports[`App component > should match snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div>
-        <a
-          href="/"
-        >
-          Home
-        </a>
-        <a
-          href="/"
-        >
-          Shop
-        </a>
+        <nav>
+          <a
+            href="/"
+          >
+            Home
+          </a>
+          <a
+            href="/shop"
+          >
+            Shop
+          </a>
+        </nav>
         <div>
           <button
             data-testid="shop-element"
@@ -24,20 +26,42 @@ exports[`Header component > renders with two buttons and the cart icon 1`] = `
           </button>
         </div>
       </div>
+      <div>
+        <p>
+          Like what you see?
+        </p>
+        <a
+          href="/shop"
+        >
+          Go To Shop
+        </a>
+      </div>
+      <div>
+        <p>
+          @lpolverino
+        </p>
+        <a
+          href="https://github.com/lpolverino/shoping-cart"
+        >
+          look the project Repository
+        </a>
+      </div>
     </div>
   </body>,
   "container": <div>
     <div>
-      <a
-        href="/"
-      >
-        Home
-      </a>
-      <a
-        href="/"
-      >
-        Shop
-      </a>
+      <nav>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          href="/shop"
+        >
+          Shop
+        </a>
+      </nav>
       <div>
         <button
           data-testid="shop-element"
@@ -45,6 +69,26 @@ exports[`Header component > renders with two buttons and the cart icon 1`] = `
           Cart
         </button>
       </div>
+    </div>
+    <div>
+      <p>
+        Like what you see?
+      </p>
+      <a
+        href="/shop"
+      >
+        Go To Shop
+      </a>
+    </div>
+    <div>
+      <p>
+        @lpolverino
+      </p>
+      <a
+        href="https://github.com/lpolverino/shoping-cart"
+      >
+        look the project Repository
+      </a>
     </div>
   </div>,
   "debug": [Function],
