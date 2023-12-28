@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid black;
+}
+.navigation{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+.cart{
+    margin-right: 1rem;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.shoppingCart{
+    width: 16px;
+    height: 16px;
+    border: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration:none
+  }
+  a:after {
+    content: "";
+    display: block;
+    width: 0;
+    border-bottom: 2px solid;
+    margin: 0 auto;
+    transition:all 0.3s linear 0s;
+  }
+ 
+  a:hover:after {
+    width: 90%;
+  }

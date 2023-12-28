@@ -1,0 +1,29 @@
+.slider{
+    border-left: 3px solid black;
+    border-right:3px solid black;
+    background-image: url("living.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 1.8rem;
+
+    color: rgb(0, 0, 0);
+}
+
+.slider::after{
+    position: absolute;
+    bottom: 1em;
+    left: 0px;
+    content: "image by Kam Idris";
+    color:  rgb(255, 255, 255);
+    font-size: 0.6em;
+
+}
+

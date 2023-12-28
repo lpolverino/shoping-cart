@@ -1,15 +1,15 @@
-import './App.css'
+import styles from './App.module.css'
 import Header from '../Header/Header'
 import ImageSlider from '../ImageSlider/ImageSlider'
 import Footer from '../Footer/Footer'
 
 function App() {
   return (
-    <>
-    <Header></Header>
-    <ImageSlider></ImageSlider>
-    <Footer></Footer>
-    </>
+    <div className={styles.page}>
+    <Header className={styles.header}></Header>
+    <ImageSlider className={styles.slider}></ImageSlider>
+    <Footer className={styles.footer}></Footer>
+    </div>
   )
 }
 
