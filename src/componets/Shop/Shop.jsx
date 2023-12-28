@@ -46,6 +46,7 @@ const Shop = () => {
   }
 
   const addToCart = (product, amount) => {
+      if (amount === 0) return
       const index = shopingList.indexOf((item) =>item.title === product.title)
       if (index === -1) {
         console.log([ ...shopingList, {amount,product}] );
@@ -56,6 +57,12 @@ const Shop = () => {
         const newShopingList = shopingList.splice(1,index) + [newProduct]
         setShopingList(newShopingList)
       }
+  }
+
+  const deleteItemOfCart = (product) =>{
+    const index = shopingList.indexOf((item) =>item.title === product.title)
+    const newShopingList = shopingList.splice(1, index)
+    setShopingList(newShopingList)
   }
 
   const productsToShow = filterProducts(filter, products)
@@ -70,7 +77,7 @@ const Shop = () => {
           <SearchingBar text={filter} onChange={updateFilter}></SearchingBar>
           <Products isLoading={isLoading} products={productsToShow} addPorductToCartHandler = {( product, amount) => addToCart(product,amount)}></Products>
         </div>
-        <Cart addedProducts={shopingList}></Cart>
+        <Cart addedProducts={shopingList} deleteProduct={deleteItemOfCart}></Cart>
       </div>
       <Footer></Footer>
     </div>
