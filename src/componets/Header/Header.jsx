@@ -6,11 +6,12 @@ import { RiShoppingCartFill } from "react-icons/ri";
 const Header = () => {
   return (
     <div className={styles.header}>
+      <h1 className={styles.title}>Bazar</h1>
         <nav className={styles.navigation}>
             <LinksButton link ="/" name="Home"></LinksButton>
             <LinksButton link ="shop" name="Shop"></LinksButton>
         </nav>
-        <div >
+        <div className={styles.cartConteiner}>
             <button data-testid = "shop-element" className={styles.cart}>
               <RiShoppingCartFill className={styles.shoppingCart}></RiShoppingCartFill>
             </button>

@@ -5,6 +5,7 @@ import SearchingBar from '../SearchingBar/SearchingBar'
 import Cart from "../Cart/Cart"
 import Products from "../Products/Products"
 import ErrorPage from '../ErrorPage/ErrorPage'
+import styles from "./shop.module.css"
 
 
 const filterProducts = (filter, products) =>{
