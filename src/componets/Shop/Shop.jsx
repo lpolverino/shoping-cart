@@ -47,21 +47,23 @@ const Shop = () => {
 
   const addToCart = (product, amount) => {
       if (amount === 0) return
-      const index = shopingList.indexOf((item) =>item.title === product.title)
+      const index = shopingList.findIndex((item) => item.product.id === product.id);
       if (index === -1) {
-        console.log([ ...shopingList, {amount,product}] );
         setShopingList([ ...shopingList, {amount,product}])
       }
       else{
-        const newProduct = {...shopingList[index], amount:shopingList[index].amount + amount }
-        const newShopingList = shopingList.splice(1,index) + [newProduct]
+        const newShopingList = shopingList.map((item) =>{
+          if(item.product.id === product.id) return{
+            ...item, amount: item.amount + amount
+          }
+          return item
+        })
         setShopingList(newShopingList)
       }
   }
 
-  const deleteItemOfCart = (product) =>{
-    const index = shopingList.indexOf((item) =>item.title === product.title)
-    const newShopingList = shopingList.splice(1, index)
+  const deleteItemOfCart = (itemToDelete) =>{
+    const newShopingList  = shopingList.filter((item) =>item.product.id !== itemToDelete.product.id)
     setShopingList(newShopingList)
   }
 
@@ -75,7 +77,7 @@ const Shop = () => {
       <div className={styles.shopContent}>
         <div className={styles.shopItems}>
           <SearchingBar text={filter} onChange={updateFilter}></SearchingBar>
-          <Products isLoading={isLoading} products={productsToShow} addPorductToCartHandler = {( product, amount) => addToCart(product,amount)}></Products>
+          <Products isLoading={isLoading} products={productsToShow} addPorductToCartHandler = {(product, amount) => addToCart(product,amount)}></Products>
         </div>
         <Cart addedProducts={shopingList} deleteProduct={deleteItemOfCart}></Cart>
       </div>
