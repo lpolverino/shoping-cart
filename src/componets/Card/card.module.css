@@ -1,0 +1,14 @@
+.card{
+    margin: 10px;
+    width: 400px;
+    height: auto;
+    margin: 32px;
+    text-align: center;
+    transition: transform ease-in;
+}
+
+.card:focus,
+.card:hover{
+    transform: scale(1.01);
+}
+

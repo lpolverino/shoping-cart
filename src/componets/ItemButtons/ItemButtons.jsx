@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { FaPlus, FaMinus } from "react-icons/fa";
+import styles from "./itemButtons.module.css"
 
 const ItemButtons = ({addToCart}) => {
     const [amount, setAmout] = useState(0)
@@ -8,11 +10,15 @@ const ItemButtons = ({addToCart}) => {
       addToCart(amount)
     }
   return (
-    <div>
-        <button onClick={(e) => setAmout(amount +1)}>+</button>
+    <div className={styles.addButons}> 
+        <button onClick={(e) => setAmout(amount +1)}>
+          <FaPlus className={styles.plus}></FaPlus>
+        </button>
         <p>{amount}</p>
-        <button onClick={(e) => setAmout(amount -1)}>-</button>
-        <button onClick={(e) => onClickHandler(e) }>Add To Cart</button>
+        <button onClick={(e) => setAmout(amount -1)}>
+          <FaMinus></FaMinus>
+        </button>
+        <button className={styles.addCart} onClick={(e) => onClickHandler(e) }>Add To Cart</button>
     </div>
   )
 }

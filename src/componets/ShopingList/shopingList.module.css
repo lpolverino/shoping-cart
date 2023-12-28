@@ -1,0 +1,13 @@
+.list{
+    list-style: none;
+    border-radius: 15px;
+    background-color: rgb(228, 224, 1);
+    width: 90%;
+    margin:10px;
+    margin-right: 30px;
+    overflow : scroll;
+    max-height: calc(100vh - 300px)
+}
+.item{
+    margin-top: 10px;
+}

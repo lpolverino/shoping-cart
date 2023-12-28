@@ -1,0 +1,12 @@
+.products{
+    width: 100%;
+    height: calc(100vh - 240px);
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.products h2{
+    margin: auto;
+}

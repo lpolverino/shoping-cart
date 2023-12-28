@@ -1,0 +1,17 @@
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter{
+    width: 320px;
+    border: 2px solid rgba(200, 200, 200, 0.8);
+    border-radius: 15px;
+    padding: 8px;
+}
+
+.filter:focus,
+.filter:active{
+    outline: none;
+    border: 2px solid rgba(140, 140, 140, 0.8);
+}

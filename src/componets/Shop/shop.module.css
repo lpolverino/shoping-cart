@@ -1,0 +1,23 @@
+.shop{
+    display: grid;
+    grid-template-rows: 80px 1fr 80px ;
+}
+
+.shopContent{
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    justify-content: center;
+    gap: 20px;
+}
+
+.shopItems{
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    border-right: 2px inset gray;
+}
+
+.cart{
+    position:sticky;
+}

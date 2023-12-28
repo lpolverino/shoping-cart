@@ -63,11 +63,15 @@ const Shop = () => {
   if (error) return <ErrorPage msg={error}></ErrorPage>
 
   return (
-    <div>
+    <div className={styles.shop}>
       <Header></Header>
-      <SearchingBar text={filter} onChange={updateFilter}></SearchingBar>
-      <Products isLoading={isLoading} products={productsToShow} addPorductToCartHandler = {( product, amount) => addToCart(product,amount)}></Products>
-      <Cart addedProducts={shopingList}></Cart>
+      <div className={styles.shopContent}>
+        <div className={styles.shopItems}>
+          <SearchingBar text={filter} onChange={updateFilter}></SearchingBar>
+          <Products isLoading={isLoading} products={productsToShow} addPorductToCartHandler = {( product, amount) => addToCart(product,amount)}></Products>
+        </div>
+        <Cart addedProducts={shopingList}></Cart>
+      </div>
       <Footer></Footer>
     </div>
   )

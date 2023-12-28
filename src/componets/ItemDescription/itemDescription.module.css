@@ -1,0 +1,17 @@
+img{
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+}
+
+.description{
+    overflow: scroll;
+    width: 360px;
+    height: 360px;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 58px 300px;
+
+    place-items: center;
+}

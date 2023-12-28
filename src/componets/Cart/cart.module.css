@@ -1,0 +1,19 @@
+.cart{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.empty{
+    animation: empty 1s ease-in-out 0.2s infinite alternate;
+}
+
+@keyframes empty {
+    0%{
+        font-size: 1em;
+    }
+    100%{
+        font-size: 1.1em;
+    }
+}
