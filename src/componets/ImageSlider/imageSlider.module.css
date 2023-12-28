@@ -1,7 +1,7 @@
 .slider{
     border-left: 3px solid black;
     border-right:3px solid black;
-    background-image: url("living.jpg");
+    background-image: url("../living.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
